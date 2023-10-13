@@ -261,6 +261,7 @@ void gui::Render() noexcept
 	ImGui::SetNextWindowPos({ 0, 0 });
 	ImGui::SetNextWindowSize({ WIDTH, HEIGHT });
  ImGuiStyle& style = ImGui::GetStyle();
+	//if you want to change the colors https://keiwando.com/color-picker/ and change the color of menu 
  style.Colors[ImGuiCol_WindowBg] = ImVec4(0.13, 0.13, 0.13, 1.0);
  style.Colors[ImGuiCol_TitleBgActive] = ImColor(0, 0, 0);
  style.Colors[ImGuiCol_Header] = ImColor(119, 7, 7);
