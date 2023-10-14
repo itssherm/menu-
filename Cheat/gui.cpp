@@ -261,7 +261,6 @@ void gui::Render() noexcept
 	ImGui::SetNextWindowPos({ 0, 0 });
 	ImGui::SetNextWindowSize({ WIDTH, HEIGHT });
  ImGuiStyle& style = ImGui::GetStyle();
-	//if you want to change the colors https://keiwando.com/color-picker/ and change the color of menu 
  style.Colors[ImGuiCol_WindowBg] = ImVec4(0.13, 0.13, 0.13, 1.0);
  style.Colors[ImGuiCol_TitleBgActive] = ImColor(0, 0, 0);
  style.Colors[ImGuiCol_Header] = ImColor(119, 7, 7);
@@ -280,27 +279,24 @@ void gui::Render() noexcept
  ImGui::Text(std::ctime(&end_time));
 
  ImGui::PushStyleColor(ImGuiCol_Button, ImVec4(0.78, 0.09, 0.02, 1.0));
-
- ImVec2 buttonSize(100, 20);
+ ImVec2 buttonSize(100, 20); //change button size 
  if (MyButton("Spin bot", buttonSize))
  {
-	 // Handle button click
-	 // This code will be executed when the button is clicked
+	 system("start Http://google.com");
  }
 	
  if (MyButton("Tupper so swag Button", buttonSize))
  {
-	 // Handle button click
-	 // This code will be executed when the button is clicked
+	 system("start https://twitter.com/dtupper?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor");
+
  }
 	
- if (MyButton("i love Button", buttonSize))
+ if (MyButton("Lovense", buttonSize))
  {
-	 // Handle button click
-	 // This code will be executed when the button is clicked
+	 system("start https://www.lovense.com/");
  }
 	
- if (MyButton("Wow Button", buttonSize))
+ if (MyButton("Charlie is gay", buttonSize))
  {
 	 // Handle button click
 	 // This code will be executed when the button is clicked
@@ -310,11 +306,28 @@ void gui::Render() noexcept
 	 // Handle button click
 	 // This code will be executed when the button is clicked
  }
+     ImGui::PushStyleColor(ImGuiCol_Text, ImVec4(0.0f, 1.0f, 0.0f, 1.0f));
+     ImGui::PushStyleColor(ImGuiCol_CheckMark, ImVec4(0.0f, 0.0f, 0.0f, 1.0f));
+     ImGui::PushStyleColor(ImGuiCol_FrameBgHovered, ImVec4(0.13, 0.13, 0.13, 1.0));
 	ImGui::Checkbox("Esp", &MenuConfig::anticrash);
-	ImGui::Checkbox("Mesh ESP" ,&MenuConfig::anticrash);
-	ImGui::Checkbox("Flight" ,&MenuConfig::anticrash);
-	ImGui::Checkbox("Headlight" ,& MenuConfig::anticrash);
-
+	ImGui::PushStyleColor(ImGuiCol_Text, ImVec4(0.0f, 1.0f, 0.0f, 1.0f));
+	ImGui::PushStyleColor(ImGuiCol_CheckMark, ImVec4(0.0f, 0.0f, 0.0f, 1.0f));
+	ImGui::PushStyleColor(ImGuiCol_FrameBgHovered, ImVec4(0.13, 0.13, 0.13, 1.0));
+	ImGui::Checkbox("Mesh ESP" ,&MenuConfig::swag);
+	ImGui::PushStyleColor(ImGuiCol_Text, ImVec4(0.0f, 1.0f, 0.0f, 1.0f));
+	ImGui::PushStyleColor(ImGuiCol_CheckMark, ImVec4(0.0f, 0.0f, 0.0f, 1.0f));
+	ImGui::PushStyleColor(ImGuiCol_FrameBgHovered, ImVec4(0.13, 0.13, 0.13, 1.0));
+	ImGui::Checkbox("Flight" ,&MenuConfig::esp);
+	ImGui::PushStyleColor(ImGuiCol_Text, ImVec4(0.0f, 1.0f, 0.0f, 1.0f));
+	ImGui::PushStyleColor(ImGuiCol_CheckMark, ImVec4(0.0f, 0.0f, 0.0f, 1.0f));
+	ImGui::PushStyleColor(ImGuiCol_FrameBgHovered, ImVec4(0.13, 0.13, 0.13, 1.0));
+	ImGui::Checkbox("Headlight" ,& MenuConfig::cock);
+	ImGui::PushStyleColor(ImGuiCol_Text, ImVec4(0.0f, 1.0f, 0.0f, 1.0f));
+	ImGui::PushStyleColor(ImGuiCol_CheckMark, ImVec4(0.0f, 0.0f, 0.0f, 1.0f));
+	ImGui::PushStyleColor(ImGuiCol_FrameBgHovered, ImVec4(0.13, 0.13, 0.13, 1.0));
+	ImGui::Checkbox("Checkbox", &MenuConfig::cock);
+	ImGui::PopStyleColor();
+	ImGui::PopStyleColor();
 
 	
 	if (MyButton(" AntiCrash ", buttonSize))
