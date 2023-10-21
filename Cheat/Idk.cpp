@@ -5,5 +5,6 @@ namespace MenuConfig
 	inline bool anticrash = false;
 	inline bool swag = false;
 	inline bool esp = false;
-	inline bool cock = false;
+	inline bool money = false;
+        inline bool cash = false; 
 }
