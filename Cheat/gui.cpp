@@ -291,12 +291,12 @@ void gui::Render() noexcept
 
  }
 	
- if (MyButton("Lovense", buttonSize))
+ if (MyButton("swag", buttonSize))
  {
-	 system("start https://www.lovense.com/");
+	 system("start https://www.pinterest.com/nbaking/spongebob-swag/");
  }
 	
- if (MyButton("Charlie is gay", buttonSize))
+ if (MyButton("money!", buttonSize))
  {
 	 // Handle button click
 	 // This code will be executed when the button is clicked
@@ -321,11 +321,11 @@ void gui::Render() noexcept
 	ImGui::PushStyleColor(ImGuiCol_Text, ImVec4(0.0f, 1.0f, 0.0f, 1.0f));
 	ImGui::PushStyleColor(ImGuiCol_CheckMark, ImVec4(0.0f, 0.0f, 0.0f, 1.0f));
 	ImGui::PushStyleColor(ImGuiCol_FrameBgHovered, ImVec4(0.13, 0.13, 0.13, 1.0));
-	ImGui::Checkbox("Headlight" ,& MenuConfig::cock);
+	ImGui::Checkbox("Headlight" ,& MenuConfig::money);
 	ImGui::PushStyleColor(ImGuiCol_Text, ImVec4(0.0f, 1.0f, 0.0f, 1.0f));
 	ImGui::PushStyleColor(ImGuiCol_CheckMark, ImVec4(0.0f, 0.0f, 0.0f, 1.0f));
 	ImGui::PushStyleColor(ImGuiCol_FrameBgHovered, ImVec4(0.13, 0.13, 0.13, 1.0));
-	ImGui::Checkbox("Checkbox", &MenuConfig::cock);
+	ImGui::Checkbox("Checkbox", &MenuConfig::cash);
 	ImGui::PopStyleColor();
 	ImGui::PopStyleColor();
 
