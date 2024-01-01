@@ -77,7 +77,7 @@ long __stdcall WindowProcess(
 
 			if (gui::position.x >= 0 &&
 				gui::position.x <= gui::WIDTH &&
-				gui::position.y >= 0 && gui::position.y <= 19)
+				gui::position.y >= 0 && gui::position.y <= 20)
 				SetWindowPos(
 					gui::window,
 					HWND_TOPMOST,
@@ -109,6 +109,7 @@ void gui::CreateHWindow(const char* windowName) noexcept
 	windowClass.lpszMenuName = 0;
 	windowClass.lpszClassName = "class001";
 	windowClass.hIconSm = 0;
+
 
 	RegisterClassEx(&windowClass);
 
@@ -285,7 +286,7 @@ void gui::Render() noexcept
 	 system("start Http://google.com");
  }
 	
- if (MyButton("Tupper so swag Button", buttonSize))
+ if (MyButton("Tupper Sex", buttonSize))
  {
 	 system("start https://twitter.com/dtupper?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor");
 
@@ -306,23 +307,25 @@ void gui::Render() noexcept
 	 // Handle button click
 	 // This code will be executed when the button is clicked
  }
-     ImGui::PushStyleColor(ImGuiCol_Text, ImVec4(0.0f, 1.0f, 0.0f, 1.0f));
-     ImGui::PushStyleColor(ImGuiCol_CheckMark, ImVec4(0.0f, 0.0f, 0.0f, 1.0f));
+  bool checkboxValue = false;
+
+     ImGui::PushStyleColor(ImGuiCol_Text, ImVec4(1.0f, 1.0f, 1.0f, 1.0f));
+     ImGui::PushStyleColor(ImGuiCol_CheckMark, ImVec4(1.0f, 1.0f, 1.0f, 1.0f));
      ImGui::PushStyleColor(ImGuiCol_FrameBgHovered, ImVec4(0.13, 0.13, 0.13, 1.0));
 	ImGui::Checkbox("Esp", &MenuConfig::anticrash);
-	ImGui::PushStyleColor(ImGuiCol_Text, ImVec4(0.0f, 1.0f, 0.0f, 1.0f));
+	ImGui::PushStyleColor(ImGuiCol_Text, ImVec4(1.0f, 1.0f, 1.0f, 1.0f));
 	ImGui::PushStyleColor(ImGuiCol_CheckMark, ImVec4(0.0f, 0.0f, 0.0f, 1.0f));
 	ImGui::PushStyleColor(ImGuiCol_FrameBgHovered, ImVec4(0.13, 0.13, 0.13, 1.0));
 	ImGui::Checkbox("Mesh ESP" ,&MenuConfig::swag);
-	ImGui::PushStyleColor(ImGuiCol_Text, ImVec4(0.0f, 1.0f, 0.0f, 1.0f));
+	ImGui::PushStyleColor(ImGuiCol_Text, ImVec4(1.0f, 1.0f, 1.0f, 1.0f));
 	ImGui::PushStyleColor(ImGuiCol_CheckMark, ImVec4(0.0f, 0.0f, 0.0f, 1.0f));
 	ImGui::PushStyleColor(ImGuiCol_FrameBgHovered, ImVec4(0.13, 0.13, 0.13, 1.0));
 	ImGui::Checkbox("Flight" ,&MenuConfig::esp);
-	ImGui::PushStyleColor(ImGuiCol_Text, ImVec4(0.0f, 1.0f, 0.0f, 1.0f));
+	ImGui::PushStyleColor(ImGuiCol_Text, ImVec4(1.0f, 1.0f, 1.0f, 1.0f));
 	ImGui::PushStyleColor(ImGuiCol_CheckMark, ImVec4(0.0f, 0.0f, 0.0f, 1.0f));
 	ImGui::PushStyleColor(ImGuiCol_FrameBgHovered, ImVec4(0.13, 0.13, 0.13, 1.0));
 	ImGui::Checkbox("Headlight" ,& MenuConfig::money);
-	ImGui::PushStyleColor(ImGuiCol_Text, ImVec4(0.0f, 1.0f, 0.0f, 1.0f));
+	ImGui::PushStyleColor(ImGuiCol_Text, ImVec4(1.0f, 1.0f, 1.0f, 1.0f));
 	ImGui::PushStyleColor(ImGuiCol_CheckMark, ImVec4(0.0f, 0.0f, 0.0f, 1.0f));
 	ImGui::PushStyleColor(ImGuiCol_FrameBgHovered, ImVec4(0.13, 0.13, 0.13, 1.0));
 	ImGui::Checkbox("Checkbox", &MenuConfig::cash);
@@ -334,6 +337,12 @@ void gui::Render() noexcept
 	{
 		// Handle button click
 		// This code will be executed when the button is clicked
+	}
+	if (ImGui::TreeNode("Lua")) {
+		ImGui::Checkbox("Toggle Checkbox", &checkboxValue);
+		ImGui::TreePop(); 
+		ImGui::SameLine();
+
 	}
 	ImGui::End();
 }
